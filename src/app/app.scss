@@ -1,0 +1,26 @@
+:host ::ng-deep #lhasa-root {
+  border: 2px solid red;
+  .lhasa_editor {
+    width: 100% !important;
+
+    .editor_canvas_container {
+      min-width: 98% !important;
+
+      svg {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #0a5032 !important;
+  color: #fff !important;
+  padding: 10px;
+  margin-bottom: 20px;
+}
