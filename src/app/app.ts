@@ -1,18 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { createLhasa } from 'lhasa-ligand-builder-plainjs';
+import { Component } from '@angular/core';
+import { RouterOutlet, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterOutlet, RouterModule],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
-export class App implements AfterViewInit {
-  ngAfterViewInit(): void {
-    const lhasa = createLhasa(document.getElementById('lhasa-root')!, {
-      assetsBaseUrl: 'assets/lhasa-assets/',
-    });
-  }
-}
+export class App {}
